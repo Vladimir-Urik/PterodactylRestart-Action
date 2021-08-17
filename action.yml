@@ -19,7 +19,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.folder }}
+    - ${{ inputs.url }}
     - ${{ inputs.server }}
     - ${{ inputs.token }}
     - ${{ inputs.action }}
