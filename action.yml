@@ -1,0 +1,29 @@
+# action.yml
+name: 'ReDactyl'
+description: 'Restart pterodactyl server'
+inputs:
+  url:
+    description: 'url'
+    required: true
+  server:
+    description: 'server'
+    required: true
+  token:
+    description: 'token'
+    required: true
+  action:
+    description: 'action'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.folder }}
+    - ${{ inputs.server }}
+    - ${{ inputs.token }}
+    - ${{ inputs.action }}
+
+branding:
+  icon: 'upload-cloud'  
+  color: 'green'
